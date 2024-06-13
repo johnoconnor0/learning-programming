@@ -1,0 +1,3 @@
+<book title="Great Expectations" author="Charles Dickens" year="1861" />
+
+<!-- In this XML element, title, author, and year are attributes of the book element. -->

@@ -1,0 +1,1 @@
+Attributes in XML provide additional information about elements. They are defined within the start tag of an element and help in specifying properties or other data that determines how elements behave or are handled.
