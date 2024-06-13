@@ -1,0 +1,15 @@
+<a href="URL">Link Text</a>
+
+<a href="https://www.openai.com">Visit OpenAI</a>
+
+<a href="https://www.openai.com">Visit OpenAI</a>
+
+<a href="mailto:someone@example.com">Send Email</a>
+
+<!-- Link to the specific part of the page -->
+<a href="#section1">Go to Section 1</a>
+
+<!-- Section to link to -->
+<div id="section1">This is Section 1</div>
+
+<a href="https://www.openai.com" target="_blank">Visit OpenAI in a new tab</a>

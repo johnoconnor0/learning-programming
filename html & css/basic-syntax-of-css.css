@@ -1,0 +1,13 @@
+selector {
+    property: value;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    color: navy;
+}
+
+h1 {
+    color: red;
+}
