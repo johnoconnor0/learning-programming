@@ -1,0 +1,1 @@
+In the context of object-oriented programming, an attribute (often interchangeably called a "field" or "property") is a variable associated with a specific class or object. These attributes hold data about the object's state. They define the characteristics of the object, and the methods of the class can manipulate these attributes to perform operations.

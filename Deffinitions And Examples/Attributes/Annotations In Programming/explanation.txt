@@ -1,0 +1,1 @@
+In languages like Java and C#, attributes (often termed annotations in Java) can be used to annotate code elements such as classes, methods, variables, and parameters. These annotations provide metadata about the elements that can be used for defining configuration, compilation instructions, runtime instructions, etc.

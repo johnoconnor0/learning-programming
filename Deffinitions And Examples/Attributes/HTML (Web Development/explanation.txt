@@ -1,0 +1,1 @@
+In HTML, attributes provide additional information about HTML elements. They are always specified in the opening tag of an element and usually come in name/value pairs like name="value".
