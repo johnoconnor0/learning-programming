@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Creating HTML Tables</title>
+        <style>
+            th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                border-radius: 10px;
+                border-style: ridge;
+                padding-top: 10px;
+                padding-bottom: 20px;
+                padding-left: 30px;
+                padding-right: 40px;
+            }
+            table {
+                border-spacing: 10px;
+            }
+            tr:nth-child(even) {
+                background-color: #D6EEEE;
+            }
+            .main-table-headers:hover {
+                background-color: #D6EEEE
+            }
+            .main-table-headers {
+                border-bottom: 1px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <table style="width: 100%;">
+            <caption>This is an example table</caption>
+            <tr> <!-- tr stands for table row -->
+                <th style="width: 25%; height: 200px;">Company</th> <!-- These are the table headers -->
+                <th style="width: 50%;">Contact</th>
+                <th style="width: 25%;">Country</th>
+            </tr>
+            <tr>
+                <td style="height: 100px;">Alfreds Futterkiste</td> <!-- These are the rows <td> stands for table data -->
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Centro Comercial Moctexuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+            </tr>
+        </table>
+        <table> <!-- A table that has a header that spans two columns -->
+            <tr>
+                <th colspan="2">Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>    
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+        </table>
+        <table> <!-- A table with vertical headers -->
+            <tr>
+                <th>Firstname</th>
+                <td>Jill</td>
+                <td>Eve</td>
+            </tr>
+            <tr>
+                <th>Lastname</th>
+                <td>Smith</td>
+                <td>Jackson</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>94</td>
+                <td>50</td>
+            </tr>
+        </table>
+
+        <table class="main-table">
+            <tr class="main-table-headers">
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Savings</th>
+            </tr>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+                <td>$150</td>
+            </tr>
+            <tr>
+                <td>Joe</td>
+                <td>Swanson</td>
+                <td>$300</td>
+            </tr>
+        </table>
+        <table style="width: 100%;">
+            <colgroup>
+              <col span="2" style="background-color: #D6EEEE">
+            </colgroup>
+            <tr>
+                <th>MON</th>
+                <th>TUE</th>
+                <th>WED</th>
+                <th>THU</th>
+                <th>FRI</th>
+                <th>SAT</th>
+                <th>SUN</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+            </tr>
+        </table>
+    </body>
+</html>
