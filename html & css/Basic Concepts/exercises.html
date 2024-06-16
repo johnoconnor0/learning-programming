@@ -1,0 +1,127 @@
+<DOCTYPE html>
+<html lang="en"> <!-- hreflang tag inside the html tag-->
+    <head>
+        <title>Exercises</title>
+        <style>
+            .intro {
+                background-color: pink;
+            }
+            #myheader {
+                background-color: lightblue;
+                color: black;
+                padding: 40px;
+                text-align: center;
+            }
+        </style>
+        <script>
+            document.getElementById("demo").innerHTML = "Hello World!";
+            document.getElementById("demo").style.fontSize = "25px";
+            document.getElementById("demo").style.backgroundColor = "yellow";
+        </script>            
+    </head>
+    <body>
+        <a href="https://www.example.com" title="Go to example.com">Visit Example</a>
+        <hr> <!-- a horizontal line accross the page --> 
+        <p>Hello World!</p>
+
+        <pre> <!-- tags that preserve space and linebreaks -->
+            My Bonnie lies over the ocean.
+
+            My Bonnie lies over the sea.
+          
+            My Bonnie lies over the ocean.
+          
+            Oh, bring back my Bonnie to me.
+        </pre>
+        <p style="font-size: 50px;"> This is a pargraph with a 50px font size.</p>
+        <p style="text-align: center;">This is a paragraph alligned to the centre.</p>
+        <p style="font-family: 'Courier New', Courier, monospace;">This is a paragraph with a font family style tag.</p>
+        <p style="color: blue;">This is a blue paragraph with the style tags in the `p`tags.</p>
+        <p><strong>This is a paragraph</strong></p> <!-- Displays importance -->
+        <p><b>This is a paragraph</b></p> <!-- Bolds text -->
+        <p><em>This is a paragraph</em></p> <!-- emphasises text -->
+        <p><mark>This is a paragraph</mark></p> <!-- highlights text -->
+        <p>H<sub>2</sub>O is the scientific term for water</p> <!-- applies subscript formatting to text -->
+        <p>My favourite color is <del>blue</del> Red</p> <!-- defines text that has been deleted from a document, browsers will usually strike a line through the deleted text -->
+        <p>My favourite color is <q>blue</q> Red</p> <!-- adds quotation marks around text -->
+        <blockquote cite="https://www.worldwildlife.org">For 50 years, wff has been protecting the futre of nature</blockquote> <!-- Blockquotes define a section that is quoted from another source -->
+        <bdo dir="rtl">What a beautoful day!</bdo> <!-- used to overide the current text direction -->
+        <p><abbr title="World Health Organisation">WHO</abbr> was founded in 1948.</p> <!--  used for abbrieviating text -->
+        <p style="background-color: rgb(red, green, blue);">This is a paragraph</p>
+        <p style="color: hsla(0, 100%, 50%, 50%);">This is a paragraph</p>
+        <p><a href="html_images.asp" style="text-decoration: none;">HTML Images</a></p> <!-- removes underline from the link -->
+        <p><a href="html_images.asp" target="_blank">HTML Images</a></p> <!-- opens the link in a new window -->
+        <p><a href="default.html"><img src="smiley.gif"></a></p>
+        <p style="background-image: url('https://igeneratedigital.com.au/wp-content/uploads/2022/10/igenerate-digital-logo-1-e1706261394746.png');"></p>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> <!-- Handles the favicon of a website -->
+        <table style="border: 3px solid black;"> <!-- Creates a table -->
+            <caption>Practice</caption>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th rowspan="2">Birthplace</th> <!-- This header will span two rows -->
+                <th colspan="2">Job Title</th> <!-- This header will span two colums -->
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td>Test</td>
+                <td>Test</td>
+            </tr>
+        </table>
+        <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+        <ul style="list-style-type: square;">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+        <ol>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol>
+        <dl>
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+        </dl>
+        <ol type="A"> <!-- Ordered list that is capitalised letters-->
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol>
+        <h1 class="intro">This is a heading that uses a class to style</h1>
+        <h1 id="myheader">This is a heading styled by an ID attribute</h1>
+        <p id="demo">Hi.</p>
+
+        <p>Code example: <code>var person;</code></p>
+        <p>A simple math equation: <var>x</var> = 3 + 2;</p>
+
+        <form action="tooltips.html" method="POST">
+            <label for="First name:">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="Last name":>Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="O'Connor"><br>
+            <input type="radio" name="fav_language">
+            <input type="button" value="OK">
+            <input type="submit" value="Submit">
+        </form>
+
+        <label for="cars">Choose A Car</label>
+        <textarea name="message" rows="10" cols="30"></textarea>
+        <select id="cars" name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="BMW">BMW</option>
+            <option value="Ford">Ford</option>
+            <option value="Audi">Audi</option>
+        </select>
+
+    </body>
+</html>
