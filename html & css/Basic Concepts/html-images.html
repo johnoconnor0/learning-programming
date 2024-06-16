@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Images</title>
+        <style>
+            p {
+                background-image: url("john_oconnor_Design_an_image_featuring_a_pristine_flower_pot_a__0f116d01-ef3c-4255-9964-2b43a4748ef1.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                height: 1000px;
+            }
+        </style>
+        <script>
+            function myFunction() {
+                alert("You clicked the image");
+            }
+        </script>
+    </head>
+    <body>
+        <img src="workplace.jpg" alt="workplace" usemap="#workmap" onclick="myFunction()">
+
+        <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+            <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+            <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+        </map>
+
+        <p>This is just some text</p>
+
+        <picture>
+            <source media="(min-width: 650px)" srcset="P4260041.JPG">
+            <source media="(min-width: 450px)" srcset="workplace.jpg">
+            <img src="CaveIn-scaled-1-e1712887233505-ezgif.com-webp-to-png-converter.png">
+        </picture>
+    </body>
+</html>
