@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Classes</title>
+        <style>
+            .city {
+                background-color: tomato;
+                color: white;
+                border: 2px solid black;
+                margin: 20px;
+                padding: 20px;
+            }
+            .notes {
+                font-size: 120%;
+                color: red;
+            }
+        </style>
+        <script>
+            function myFunction() {
+                var x = document.getElementsByClassName("city");
+                for (var i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- The `class` attribute is used to point to a class name in a stylesheet. It can also be used by javascript to access and manipulate elements with specifc class names -->
+        <div class="city">
+            <h2>Brisbane</h2>
+            <p>Brisbane is the captital of Queensland</p>
+        </div>
+        <div class="city">
+            <h2>Melbourne</h2>
+            <p>Melbourne is the capital of Victoria</p>
+        </div>
+        <div class="city">
+            <h2>Sydney</h2>
+            <p>Sydney is the capital of New South</p> 
+        </div>
+        <h1>My <span class="notes">Important</span> Headings</h1>
+        <p>This is some <span class="notes"> important</span> text.</p>
+    </body>
+</html>
