@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Javascript</title>
+        <script>
+            function changeText() {
+                document.getElementById("demo").innerHTML = "Hello Javascript";
+            }
+        </script>
+        <noscript>Sorry, your browser does not support Javascript!</noscript>
+    </head>
+    <body>
+        <h1>My First Javascript</h1>
+        <button onclick="document.getElementById('time-date').innerHTML = Date()">Click Me</button>
+        <p id="time-date"></p>
+        <br>
+        <h1 id="demo">Test Header</h1>
+        <button onclick="changeText()">Click Me To Change Text</button>
+        <button onclick="document.getElementById('demo').style.fontSize = '50px'";>Click Me To Change Font Size</button>
+        <button onclick="document.getElementById('demo').style.color = 'red'";>Click Me To Change Text Colour</button>
+        <button onclick="document.getElementById('demo').style.backgroundColor = 'purple'";>Click Me To Change the Background Colour</button>
+    </body>
+</html>

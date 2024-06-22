@@ -3,15 +3,39 @@
     <head>
         <title>HTML Id's</title>
         <style>
+            /* Style the element with the id "myHeader" */
             #myHeader {
                 background-color: lightblue;
                 color: black;
                 padding: 40px;
                 text-align: center;
             }
+            /* Style all elements with the class name "city" */
+
+            .city {
+                background-color: tomato;
+                color: white;
+                padding: 10px;
+            }
         </style>
+        <script>
+            function displayResult() {
+                document.getElementById("myHeader").innerHTML = "Have a nice day!";
+            }
+        </script>
     </head>
     <body>
         <h1 id="myHeader">My Header</h1>
+        <button onclick="displayResult()">Change Text</button>
+
+        <!-- Multiple elements with the same class -->
+         <h2 class="city">Brisbane</h2>
+         <p>Brisbane is the captial city of Queensland</p>
+
+         <h2 class="city">Melbourne</h2>
+         <p>Melbourne is the capital city of Victoria</p>
+
+         <h2 class="city">Sydney</h2>
+         <p>Sydney is the captial city of New South Whales</p>
     </body>
 </html>

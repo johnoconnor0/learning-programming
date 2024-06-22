@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Layouts</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            /* Style the header */
+            header {
+                background-color: #666;
+                padding: 30px;
+                text-align: center;
+                font-size: 35px;
+                color: white;
+            }
+            /* Create two columns/boxes that floats next to each other */
+            nav {
+                float: left;
+                width: 30%;
+                height: 300px; /* only for demonstration, should be removed */
+                background: #ccc;
+                padding: 20px;
+            }
+            /* Style the list inside the menu */
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            article {
+                float: left;
+                padding: 20px;
+                width: 70%;
+                background-color: #f1f1f1;
+                height: 300px; /*only for demonstration, should be removed */
+            }
+            /* Clear floats after the columns */
+            section::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            /* Style the footer */
+            footer {
+                background-color: #777;
+                padding: 10px;
+                text-align: center;
+                color: white;
+            }
+            /* Responsive layout - makes the two columns / boxes stack on top of each other instead of next to each other, on small screens */
+            @media (max-width: 600px) {
+                nav, article {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .left {
+                background-color: #2196F3;
+                padding: 20px;
+                float: left;
+                width: 20%; /* The width is 20% by default */
+            }
+            .main {
+                background-color: #f1f1f1;
+                padding: 20px;
+                float: left;
+                width: 60%; /* The width is 60%, by default */
+            }
+            .right {
+                background-color: #04AA6D;
+                padding: 20px;
+                float: left;
+                width: 20%; /* The width is 20%, by default */
+            }
+            @media screen and (max-width: 800px) {
+                .left, .main, .right {
+                    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header><h1>Citites of Australia</h1></header>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="#">Brisbane</a></li>
+                    <li><a href="#">Melbourne</a></li>
+                    <li><a href="#">Sydney</a></li>
+                    <li><a href="#">Canberra</a></li>
+                    <li><a href="#">Darwin</a></li>
+                </ul>
+            </nav>
+            <article>
+                <h1>Brisbane</h1>
+                <p>Brisbane is the capital city of Queensland. It is one of the most populous cities in Australia and is home to the Brisbane Broncoes</p>
+            </article>
+        </section>
+        <h1 style="font-size: 10vw;">Hello World</h1>
+        <div class="right">
+
+        </div>
+        <div class="main">
+
+        </div>
+        <div class="left">
+            
+        </div>
+        <footer>Footer</footer>
+    </body>
+</html>
