@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>getElementByID()</title>
+        <script>
+            function myFunction() {
+              document.getElementById("text3").innerHTML = "Paragraph changed.";
+            }
+        </script>
+        <script src="myScript.js"></script>
+
+    </head>
+    <body>
+        <h2>What Can Javascript Do?</h2>
+        <p id="demo">Javascript can change the HTML content.</p>
+        <button onclick='document.getElementById("demo").innerHTML = "Hello Javascript"'>Change Text</button>
+        <br>
+        <h2>Javascript Can Change HTML Values</h2>
+        <p>Javascript can change the value of the src (source) attribute of an image</p>
+        <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+        <img id="myImage" src="pic_bulboff.gif" style="width: 100px;">
+        <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+        <br>
+        <h2>Javascript can change the style of an html element.</h2>
+        <p id="text1">Javascript can do lots of awesome things like change the style of text</p>
+        <button type="button" onclick="document.getElementById('text1').style.fontSize='35px'">Click ME!</button>
+        <br>
+        <p id="text2">Javascript can hide HTML elements</p>
+        <button type="button" onclick="document.getElementById('text2').style.display='none'">Click Me</button>
+        <button type="button" onclick="document.getElementById('text2').style.display='block'">Click Me</button>
+        <br>
+        <h2>Javascrit in the Head</h2>
+        <p id="text3">A test paragraph</p>
+        <button type="button" onclick="myFunction()">Try it</button>
+        <br>
+        <h2>Demo External JavaScript</h2>
+
+        <p id="text4">A Paragraph.</p>
+
+        <button type="button" onclick="paragraphchange()">Try it</button>
+
+        <p>This example links to "myScript.js".</p>
+        <p>(myFunction is stored in "myScript.js")</p>
+
+
+    </body>
+</html>
