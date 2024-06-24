@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Syntax</title>
+    </head>
+    <body>
+        <h2>JavaScript Numbers</h2>
+
+        <p>A number can be writter with or without decimals</p>
+
+        <p id="text1"></p>
+
+        <script>document.getElementById('text1').innerHTML = 10.50</script>
+
+        <h2>JavaScript Strings.</h2>
+
+        <p>JavaScript string can be written with double or single quotes.</p>
+
+        <p id="text2"></p>
+
+        <script>document.getElementById('text2').innerHTML = 'John Doe'</script>
+
+        <h2>JavaScript Varaibles</h2>
+
+        <p>In this example, x is defined as a variable. Then, x is assigned the value of 6:</p>
+
+        <p id="text3"></p>
+
+        <script>
+            let x;
+            x = 6;
+            document.getElementById('text3').innerHTML = x;
+        </script>
+
+        <h2>JavaScript Opperators</h2>
+
+        <p>JavaScript uses arithmatic opperators to compute values (just like algebra).</p>
+
+        <p id="text4"></p>
+
+        <script>document.getElementById("text4").innerHTML = (5 + 6) * 10;</script>
+
+        <h2>JavaScript Expressions</h2>
+
+        <p>Expressions compute to values</p>
+
+        <p id="text5"></p>
+
+        <script>document.getElementById("text5").innerHTML = 5 * 10;</script>
+
+        <p>Expressions can also contain variables.</p>
+
+        <p id="text6"></p>
+
+        <script>
+            var y;
+            y = 5;
+            document.getElementById("text6").innerHTML = y * 20;
+        </script>
+
+        <p>Or</p>
+
+        <p id="text7"></p>
+
+        <script>document.getElementById("text7").innerHTML = "John" + " " + "Doe";</script>
+
+        <h2>The <b>Let</b> Keyword Creates Varaibles</h2>
+
+        <p id="text8"></p>
+
+        <script>
+            let n, m;
+            n = 5 + 6;
+            m = n * 10;
+            document.getElementById("text8").innerHTML = m;
+        </script>
+
+        <h2>The <b>Var</b> Keyword Create Variables</h2>
+
+        <p id="text9"></p>
+
+        <script>
+            var q, w;
+            q = 11 + 19;
+            w = q * 7
+            document.getElementById("text9").innerHTML = w;
+        </script>
+
+        <h2>JavaScript is Case Sensitive</h2>
+        <p> Try to change lastName to lastname</p>
+
+        <p id="text10"></p>
+
+        <script>
+            let lastname, lastName;
+            lastname = "O'Connor";
+            lastName = "Travis"
+            document.getElementById("text10").innerHTML = lastName;
+        </script>
+
+        <h2>Javascript & Cammel Case</h2> 
+
+        <pre>
+            Hyphens: <!-- Hypens are not allowed in JavaScript they are reserved for substractions -->
+
+            first-name, last-name, master-card, inter-city.
+
+            Hyphens are not allowed in JavaScript. They are reserved for subtractions.
+
+           
+            Underscore:
+
+            first_name, last_name, master_card, inter_city.
+
+            Upper Camel Case (Pascal Case):
+
+            FirstName, LastName, MasterCard, InterCity.
+
+            
+            Lower Camel Case:
+
+            JavaScript programmers tend to use camel case that starts with a lowercase letter:
+
+            firstName, lastName, masterCard, interCity.
+        </pre>>
+    </body>
+</html>

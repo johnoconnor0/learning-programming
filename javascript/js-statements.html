@@ -14,6 +14,31 @@
             z = x + y; //statement 4
 
             document.getElementById("text1").innerHTML = "The value of z is " + z + ".";
+        </script><br>
+        
+        <p>In HTML, Javascript statements are executed by the browser</p>
+        <p id="text2"></p>
+        <script>document.getElementById('text2').innerHTML = "Hello Dolly."</script><br>
+        
+        <p>Javasctipy statements are seperated by semicolons.</p>
+        <p id="text3"></p>
+        <script>
+            let a, b, c;
+            a = 5;
+            b = 6;
+            c = a + b;
+            document.getElementById('text3').innerHTML = c;
+        </script>
+
+        <p>Javascript code blocks are written between { and }</p>
+        <button type="button" onclick="mysecondFunction()">Click Me</button>
+        <p id="text4"></p>
+        <p id="text5"></p>
+        <script>
+            function mysecondFunction() {
+                document.getElementById('text4').innerHTML = "Hello Dolly";
+                document.getElementById('text5').innerHTML = "How are you?";
+            }
         </script>
     </body>
 </html>
