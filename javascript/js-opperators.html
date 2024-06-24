@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Operators</title>
+    </head>
+    <body>
+        <h2>Examples</h2>
+        <p> The <b>Assignment Operator</b> = assigns values</p>
+        <p>The <b>Addition Operator</b> + adds values</p>
+        <p>The <b>Multiplication Operator</b> * multiplies values</p>
+        <p>The <b>Comparison Operator</b> > compares values</p>
+
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>Decription</th>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>Addition</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>Subtraction</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>Multiplication</td>
+            </tr>
+            <tr>
+                <td>**</td>
+                <td>Exponentiation</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>Division</td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>Modulus (Division Remainder)</td>
+            </tr>
+            <tr>
+                <td>++</td>
+                <td>Increment</td>
+            </tr>
+            <tr>
+                <td>--</td>
+                <td>Decrement</td>
+            </tr>
+        </table>
+        <h2>JavaScript Assignment Operators</h2>
+        <p>Assignment operators assign values to JavaScript variables.</p>
+        
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>Example</th>
+                <th>Same As</th>
+            </tr>
+            <tr>
+                <td>=</td>
+                <td>x = y</td>
+                <td>x = y</td>
+            </tr>
+            <tr>
+                <td>+=</td>
+                <td>x += y</td>
+                <td>x = x + y</td>
+            </tr>
+            <tr>
+                <td>-=</td>
+                <td>x -= y</td>
+                <td>x = x - y</td>
+            </tr>
+            <tr>
+                <td>*=</td>
+                <td>x *= y</td>
+                <td>x = x * y</td>
+            </tr>
+            <tr>
+                <td>/=</td>
+                <td>x /= y</td>
+                <td>x = x / y</td>
+            </tr>
+            <tr>
+                <td>%=</td>
+                <td>x %= y</td>
+                <td>x = x % y</td>
+            </tr>
+            <tr>
+                <td>**=</td>
+                <td>x **= y</td>
+                <td>x = x ** y</td>
+            </tr>
+        </table>
+        <h2>JavaScript Comparison Opperators</h2>
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>==</td>
+                <td>equal to</td>
+            </tr>
+            <tr>
+                <td>===</td>
+                <td>equal value and equal type</td>
+            </tr>
+            <tr>
+                <td>!=</td>
+                <td>not equal</td>
+            </tr>
+            <tr>
+                <td>!==</td>
+                <td>not equal value or not equal type</td>
+            </tr>
+            <tr>
+                <td>></td>
+                <td>greater than</td>
+            </tr>
+            <tr>
+                <td><</td>
+                <td>less than</td>
+            </tr>
+            <tr>
+                <td>>==</td>
+                <td>greater than or equal to</td>
+            </tr>
+            <tr>
+                <td><==</td>
+                <td>less than or equal to</td>
+            </tr>
+            <tr>
+                <td>?</td>
+                <td>ternary operator</td>
+            </tr>
+        </table>
+        <h2>JavaScript String Comparison</h2>
+
+        <p id="text4"></p>
+
+        <script>
+            let texta = "A";
+            let textb = "B";
+            let result = texta < textb;
+
+            document.getElementById('text4').innerHTML = "Is A less than B? " + result;
+        </script>
+
+        <p id="text5"></p>
+
+        <script>
+            let johnAge = 27;
+            let emilyAge = 25;
+            let olderPerson = johnAge > emilyAge;
+
+            document.getElementById('text5').innerHTML = "Is John older than Emily? " + olderPerson
+        </script>
+
+        <h2>Adding Strings And Numbers</h2>
+        <p>Adding two numbers, will return the sum, but adding a number and a string will return a string:</p>
+
+        <p id="text6"></p>
+
+        <script>
+            let x = 5 + 5;
+            let y = "5" + 5;
+            let z = "Hello" + 5;
+
+            document.getElementById('text6').innerHTML = x + "<br>" + y + "<br>" + z;
+        </script>
+    </body>
+</html>

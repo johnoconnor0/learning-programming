@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Let</title>
+    </head>
+    <body>
+        <h2>Reddeclaring Variables</h2>
+        <p>Redeclaring a variable using the <em>var</em> keyword can impose problems.</p>
+        <p>Redeclaring a variable inside a block will also redeclare the variable outside the block:</p>
+
+        <script>
+            var x = 10;
+            //Here x is 10
+        </script>
+
+        <script>
+            var x = 2;
+            //Here x is 2
+        </script>
+
+        <!-- Here x is 2-->
+
+        <p>Redeclaring a variable using <em>let</em> can solve this problem.</p>
+        <p>Redeclaring a cariable inside a block will not redeclare the variable outside the block:</p>
+
+        <script>
+            let y = 10
+            //Here y is 10
+        </script>
+
+        <script>
+            let y = 2;
+            //Here y is 2
+        </script>
+
+        <!-- Here y is 10 -->
+
+        <h2>Different Between var, let and const</h2>
+
+        <table>
+            <tr>
+                <th></th>
+                <th>Scope</th>
+                <th>Redeclare</th>
+                <th>Reassign</th>
+                <th>Hoisted</th>
+                <th>Binds this</th>
+            </tr>
+            <tr>
+                <th>var</th>
+                <td>No</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <th>let</th>
+                <td>Yes</td>
+                <td>No</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <th>const</th>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+            </tr>
+        </table>
+
+    </body>
+</html>

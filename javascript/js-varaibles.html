@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Variables</title>
+    </head>
+    <body>
+        <h2>Varaibles are containers for Storing Data</h2>
+        <p>JavaScript Varaibles can be declared in 4 ways:</p>
+        <ul>
+            <li>Automatically</li>
+            <li>Using <em>var</em></li>
+            <li>Using <em>let</em></li>
+            <li>Using <em>const</em></li>
+        </ul>
+        <p>In this example, x, y, and z are undeclared.</p>
+        <p>They are automatically declared when first used.</p>
+        
+        <p id="text1"></p>
+        
+        <script>
+            x = 11;
+            y = 17;
+            z = x + y;
+            document.getElementById('text1').innerHTML = "The value of z is: " + z;
+        </script>
+
+        <p>In this example, n, m, and t are varaibles.</p>
+
+        <p id="text2"></p>
+
+        <script>
+            n = 14;
+            m = 55;
+            t = n * m;
+            document.getElementById('text2').innerHTML = "The value of t is: " + t;
+        </script>
+
+        <h2>Notes</h2>
+        <p>The <em>var</em> keyword was used in all Javascript code from 1995 to 2015</p>
+        <p>The <em>let</em> and <em>const</em> keywords were added to JavaScript in 2015</p>
+        <p>The <em>var</em> keyword should only be used in code writted for old browsers</p>
+
+        <h2>Example Using let</h2>
+
+        <p>In this example, a, b, and c are variables.</p>
+
+        <p id="text3"></p>
+
+        <script>
+            a = 33;
+            b = 45;
+            c = a * b - 7;
+            document.getElementById('text3').innerHTML = "The value for c is: " + c;
+        </script>
+
+        <h2>Example Using Const</h2>
+
+        <p>In this example, j, k, and l are variables.</p>
+
+        <p id="text4"></p>
+
+        <script>
+            j = 9;
+            k = 13;
+            l = j + k * 10;
+            document.getElementById('text4').innerHTML = "The value of l is: " + l
+        </script>
+
+        <h2>Mixed Example</h2>
+        
+        <p>In this example, price1, price2, and total are variables.</p>
+
+        <p id="text5"></p>
+
+        <script>
+            const price1 = 5;
+            const price2 = 7;
+            let total = price1 + price2;
+            document.getElementById('text5').innerHTML = "The total is " + total;
+        </script>
+
+        <h2>When to Use, var, let, or const?</h2>
+
+        <ol>
+            <li>Always declare variables</li>
+            <li>Always use <em>const</em> if the values should not be changed</li>
+            <li>Always use const if the type should not be changed (Arrays and Objects)</li>
+            <li>Only use <em>let</em> if you can't use <em>const</em></li>
+            <li>Only use <em>var</em> if you Must support old browsers.</li>
+        </ol>
+
+        <h2>JavaScript Identifiers</h2>
+        <p>All Javascript <b>variables</b> must be <b>identified</b> with <b>unique names.</b></p>
+        <p>All these unique names are called <b>identifiers.</b></p>
+        <p>Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).</p>
+        <p>The general rules for constructing names for variables (unique identifiers) are:</p>
+        <ul>
+            <li>Names can only container letters, diggits, underscores, and dollar signs.</li>
+            <li>Names must begin with a letter.</li>
+            <li>Names can also begin with $ and _ (but we will not use it in this tutorial).</li>
+            <li>Names are case sensitive (y and Y are different variables).</li>
+            <li>Reserved words (like Javascript keywords) cannot be used as names.</li>
+        </ul>
+
+        <h2>The Assignment Operator</h2>
+        <p>In JavaScript, the equal sign (=) is an "assignment" opperator, not an "equal to" opperator.</p>
+        <p>This is dfferent from algebra. The following does not make sense in algebra.</p>
+        <p> x = x + 5</p>
+        <p>In Javascript, however, it makes perfect sense: it assigns the value of x + 5 to x.</p>
+        <p>(It calculates the value of x + 5 and puts the results into x. The value of x is incremented by 5.)</p>
+
+        <h2>Note</h2>
+        <p>The "equal to" operator is written like == in JavaScript.</p>
+
+        <h2>JavaScript Data Types</h2>
+        <p>JavaScript variables can hold numbers like 100 and text vvalues like "John Doe".</p>
+        <p>In programming, text values are called text strings.</p>
+        <p>JavaScript can handle many types of data, but for now just think of numbers and strings.</p>
+        <p>Strings are written inside double or single quotes. Numbers are written without quotes.</p>
+        <p>If you put a number in quotes, it will be treated as a text string.</p>
+
+        <p id="text6"></p>
+
+        <script>
+            const pi = 3.14;
+            let person = "John Doe";
+            let answer = "Yes I am!";
+
+            document.getElementById('text6').innerHTML = pi + "<br>" + person + "<br>" + answer;
+        </script>
+
+        <h2>Declaring a JavaScript Variable</h2>
+        <p>Creating a variable in JavaScript is called "declaring" a variable.</p>
+        <p>You declare a JavaScript variable with the <em>var</em> or the <em>let</em> keyword:</p>
+
+        <h3>Example</h3>
+
+        <p>After the declaration, the variable has no value (technically it is <em>undefined.)</em></p>
+        <p>To <b>assign</b> a value to the variable, use the equal sign:</p>
+
+        <p id="text7"></p>
+        
+        <script>
+           let carName = "Volvo";
+
+           document.getElementById('text7').innerHTML = carName;
+        </script>
+
+        <h2>One Statement, Many Variables</h2>
+        <p>You can declare many variables in one statement.</p>
+        <p>Start the statement with <em>let</em> and seperate the variables by comma:</p>
+
+        <p id="text8"></p>
+
+        <script>
+            let girlperson = "Emily", bigCarName = "Ford", Price = 200;
+
+            document.getElementById('text8').innerHTML = bigCarName;
+        </script>
+
+        <h2>Value = Undefined</h2>
+        <p>In computer programs, variables are often declared without a value. The value can be something that has to be calculated, or something that will be provided later, like user input.</p>
+        <p>A variable declared without a value will have the value <em>undefined</em>.</p>
+
+        <h2>Red-Declaring JavaScript Variables</h2>
+        <p>If yyou re-declare a Javascript cariables declared with <em>var</em> it will not lose its value.</p>
+
+        <h2>Note</h2>
+        <p>You cannot re-declare a variable declared with <em>let</em> or <em>const</em>.</p>
+
+    </body>
+</html>

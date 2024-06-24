@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Const</title>
+    </head>
+    <body>
+        <h2>When to use JavaScript const?</h2>
+        <p>Always declare a variable with <em>const</em> when you know the value should not be changed.</p>
+        <p>Use <em>const</em> when you declare:</p>
+        <ul>
+            <li>A new Array</li>
+            <li>A new object</li>
+            <li>A new function</li>
+            <li>A new RegExp</li>
+        </ul>
+
+        <h2>Constant Arrays</h2>
+        <p>You can change the elements of a constant array:</p>
+
+        <p id="text2"></p>
+
+        <script>
+            // You can create a constant array:
+            const cars = ["saab", "Volvo", "BMW"];
+
+            //You can change an element:
+            cars[0] = "Toyota";
+
+            //You can add an element:
+            cars.push("Audi");
+
+            //Display the Array
+            document.getElementById('text2').innerHTML = cars;
+        </script>
+
+        <h2>Constant Objects</h2>
+        <p>You can change the properties of a constant object:</p>
+
+        <p id="text1"></p>
+
+        <script>
+            //You czn create a const object:
+            const car = {type:"Fiar", model:"500", color:"white"};
+
+            //You can change a property:
+            car.color = "red";
+
+            //You can add a property:
+            car.owner = "Johnson";
+
+            //Display the property
+            document.getElementById('text1').innerHTML = "Car owner is " + car.owner;
+        </script>
+    </body>
+</html>
