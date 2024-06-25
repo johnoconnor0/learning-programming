@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Objects</title>
+    </head>
+    <body>
+        <h2>Object Properties</h2>
+        <p>A real like car has properties like weight and color:</p>
+        <p>car.name = Fiat, car.meodel = 500, car.weight =850kg, car.color = white.</p>
+        <p>Car objects have the same properties, but the values differ from car to car.</p>
+
+        <hr>
+
+        <h2>Object Methods</h2>
+        <p>A real like car has method like start and stop:</p>
+        <p>car.start(), car.drive(), car.barke(), car.top().</p>
+        <p>Car objects have the same methods, but the methods are performed at different times.</p>
+
+        <hr>
+
+        <h2>JavaScript Variables</h2>
+        <p>JavaScript variables are containers for data values.</p>
+        <p>This code assigns a simple value (Fiat) to a variable named car:</p>
+
+        <h3>Creating a Variable</h3>
+
+        <p id="text1"></p>
+
+        <script>
+            // Create and a Variable:
+            let car = "Fiat";
+            document.getElementById("text1").innerHTML = "Car: " + car;
+        </script>
+
+        <hr>
+
+        <h2>JavaScript Objects</h2>
+        <p>Objects are variables too. But objects can contain many values.</p>
+        <p>This code assigns many values (Fiat, 500, white) to an object named car1:</p>
+
+        <h3>Creating an Object</h3>
+
+        <p id="text2"></p>
+
+        <script>
+            //Create an Object:
+            const myCar = {type:"Fiat", model:"500", color:"white"};
+
+            // Display Data from the object:
+            document.getElementById("text2").innerHTML = "The car type is " + myCar.type;
+        </script>
+
+        <hr>
+
+        <h2>JavaScript Object Literal</h2>
+        <p>An object literal is a list of name:value pairs inside curly braces {}.</p>
+        <p>For Example: {firstName"John", lastName:"Doe", age:50, eyeColor:"blue"}</p>
+
+        <h2>Creating a JavaScript Object</h2>
+        <p>The following example create a JavaScript object with 4 properties:</p>
+
+        <h3>Using an Object Literal</h3>
+
+        <h4>Example 1</h4>
+
+        <p id="text3"></p>
+
+        <script>
+            // Create an Object:
+            const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+            // Display Data from the object:
+            document.getElementById("text3").innerHTML = person.firstName + " is " + person.age + " years old.";
+        </script>
+
+        <h4>Example 2</h4>
+
+        <p id="text4"></p>
+
+        <script>
+            // Create an Object:
+            const myPerson = {
+                firstName: "Michael",
+                lastName: "Down",
+                age: 45,
+                eyeColor: "red"
+            };
+
+            // Display Data from the Object:
+            document.getElementById("text4").innerHTML = myPerson.firstName + " is " + myPerson.age + " years old.";
+        </script>
+
+        <h4>Example 4</h4>
+
+        <p id="text5"></p>
+
+        <script>
+            // Create an empty Object
+            const thatPerson = {};
+
+            // Add Properties
+            thatPerson.firstName = "Josh";
+            thatPerson.lastName = "Selwood";
+            thatPerson.age = 37;
+            thatPerson.eyeColor = "Gray";
+
+            // Display Data from Object
+            document.getElementById("text5").innerHTML = thatPerson.firstName + " is " + thatPerson.age + " and has " + thatPerson.eyeColor + " eyes."
+        </script>
+
+        <hr>
+
+        <h2>Using the new Keyword</h2>
+        <p>This example create a new JavaScript object using <mark>new Object()</mark>, and then adds 4 properties:</p>
+
+        <h2>Using the new Keyword</h2>
+
+        <p id="text6"></p>
+
+        <script>
+            // Create an Object
+            const lion = new Object();
+            lion.legs = 4;
+            lion.name = "Alex";
+            lion.age = 15;
+            lion.zoo = "Australia Zoo"
+
+            // Display Object Content
+            document.getElementById("text6").innerHTML = lion.name + " is a lion at " + lion.zoo + ". He is " + lion.age + " years old and has " + lion.legs + " legs."
+        </script>
+
+        <hr>
+
+        <h2>Object Properties</h2>
+        <p>The named values, in JavaScript objects, are called properties.</p>
+
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>firstName</td>
+                <td>John</td>
+            </tr>
+            <tr>
+                <td>lastName</td>
+                <td>Doe</td>
+            </tr>
+            <tr>
+                <tr>age</tr>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>eyeColor</td>
+                <td>blue</td>
+            </tr>
+        </table>
+
+        <p>Objects written as name value pairs are similar to:</p>
+        <ul>
+            <li>Associative arrays in PHP</li>
+            <li>Dictionaries in Oython</li>
+            <li>Hash tables in C</li>
+            <li>Hash maps in Java</li>
+            <li>Hashes in Ruby and PErl</li>
+        </ul>
+
+        <hr>
+
+        <h2>Accessing Object Properties</h2>
+        <p>You can access object properties in two ways:</p>
+        <p><i>objectName,propertyName</i></p>
+        <p><i>objectName["propertyName"]</i></p>
+
+        <h3>Example 1</h3>
+
+        <p id="text7"></p>
+
+        <script>
+            // Create an Object:
+            const john = {
+                firstName: "John",
+                lastName: "Doe",
+                id: 5566
+            };
+
+            // Display lastName from the Object:
+            document.getElementById("text7").innerHTML = "The last name of this person is " + john.lastName;
+        </script>
+
+        <h3>Example 2</h3>
+
+        <p id="text8"></p>
+
+        <script>
+            // Create an Object:
+            const jerry = {
+                firstName: "Jerry",
+                lastName: "Seinfeld",
+                id: 5567
+            };
+
+            // Display lastName from the Object:
+            document.getElementById("text8").innerHTML = "The last name of jerry is " + jerry["lastName"];
+        </script>
+
+        <hr>
+
+        <h2>JavaScript Object Methods</h2>
+        <p>Methods are actions that can be performed on obkects.</p>
+        <p>Methods are function definitions stored as property values.</p>
+
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Property Value</th>
+            </tr>
+            <tr>
+                <td>firstName</td>
+                <td>John</td>
+            </tr>
+            <tr>
+                <td>lastName</td>
+                <td>Doe</td>
+            </tr>
+            <tr>
+                <td>age</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>eyeColor</td>
+                <td>blue</td>
+            </tr>
+            <tr>
+                <td>fullName</td>
+                <td>function() {return this.firstName + " " + this.lastName;}</td>
+            </tr>
+        </table>
+
+        <h3>Example 1</h3>
+        <p>A method is a function definition stored as a property value.</p>
+
+        <p id="text9"></p>
+
+        <script>
+            const onlyfan = {
+                firstName: "Jane",
+                lastName: "Doe",
+                id: 1122,
+                fullName: function() {
+                    return this.firstName + " " + this.lastName;
+                }
+            };
+
+            document.getElementById("text9").innerHTML = onlyfan.fullName();
+        </script>
+
+        <h2>In JavaScript, Objects are King.</h2>
+        <p>If you Understand Object, you Understand JavaScript.</p>
+        <p>Objects are containers for Properties and MEthods.</p>
+        <p>Properties are named Values</p>
+        <p>Methods are Functions stored as Properties.</p>
+        <p>Properties can be primitive values, functions, or even other objects.</p>
+        <p>In JavaScript, almost "everything" is an object.</p>
+        <ul>
+            <li>Objects are objects</li>
+            <li>Maths are objects</li>
+            <li>Functions are objects</li>
+            <li>Dates are objects</li>
+            <li>Arrays are objects</li>
+            <li>Maps are objects</li>
+            <li>Sets are objects</li>
+        </ul>
+        <p>All JavaScript values, except primitives, are objects.</p>
+
+        <hr>
+
+        <h2>JavaScript Primitives</h2>
+        <p>A primitive value is a value that has no properties or methods.</p>
+        <p>3.14 is a primitive value</p>
+        <p>A primitive data type is data that has a primitive value.</p>
+        <p>JavaScript defines 7 types of primitive data types:</p>
+        <ul>
+            <li><mark>string</mark></li>
+            <li><mark>number</mark></li>
+            <li><mark>boolean</mark></li>
+            <li><mark>null</mark></li>
+            <li><mark>undefined</mark></li>
+            <li><mark>symbol</mark></li>
+            <li><mark>bigint</mark></li>
+        </ul>
+
+        <h3>Imutable</h3>
+        <p>Primitive values are immutable (they are hardcoded and cannot be changed).</p>
+        <p>if x = 3.14, you can change the value of x, but you cannot change the value of 3.14.</p>
+
+        <hr>
+
+        <h2>JavaScript Objects are Mutable</h2>
+        <p>Objects are mutable: They are addressed by reference, not by value.</p>
+        <p>If person is an object, the following statement will not create a copy of person:</p>
+        
+        <p>const x = person;</p>
+       
+        <p>The object x is not a copy of person. The object x is person.</p>
+        <p>The object x and the object person share the same memory address.</p>
+        <p>Any changes to x will also change person:</p>
+        
+        <h3>Example 1</h3>
+
+        <p>Changes to a copy of an object will also chnage the origional object:</p>
+
+        <p id="text10"></p>
+
+        <script>
+            // Create an Object
+            const agent = {
+                firstName: "Jethro",
+                lastName: "Gibbs",
+                age: 55,
+                eyeColor: "blue"
+            };
+
+            // Create a Copy
+            const x = agent;
+
+            // Change Age
+            x.age = 78;
+
+            document.getElementById("text10").innerHTML = agent.firstName + " is " + agent.age + " years old.";
+
+
+
+        </script>
+
+
+    </body>
+</html>

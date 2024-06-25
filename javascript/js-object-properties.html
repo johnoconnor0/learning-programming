@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Object Properties</title>
+    </head>
+    <body>
+        <h2>Accessing JavaScript Properties</h2>
+        <p>The syntax for accessing the property of an object is:</p>
+
+        <!-- objectName.property -->
+        <p>let age = person.age;</p>
+
+        <!-- objectName["property"] -->
+        <p>let age = person["age"];</p>
+
+        <!-- objectName[expression] -->
+        <p>let ahe = person[x];</p>
+
+        <h2>Access a Property with .</h2>
+
+        <p id="text1"></p>
+        
+        <script>
+            const person = {
+                firstname: "John",
+                lastname: "Doe",
+                age: 50,
+                eyecolor: "blue"
+            }
+
+            document.getElementById("text1").innerHTML = person.firstname + " is " + person.age + " years old.";
+        </script>
+
+        <hr>
+
+        <h2>Access a Propert with []</h2>
+
+        <p id="text2"></p>
+
+        <script>
+            const man = {
+                firstname: "John",
+                lastname: "Doe",
+                age: 66,
+                eyecolor: "brown"
+            };
+
+            document.getElementById("text2").innerHTML = man["firstname"] + " is " + man["age"] + " yrars old.";
+        </script>
+
+        <hr>
+
+        <h2>Accessing a Propert with an Expression</h2>
+
+        <p id="text3"></p>
+
+        <script>
+            const woman = {
+                firstName: "Trish",
+                lastName: "Watkins",
+                age: 23
+            };
+
+            let x = "firstName";
+            let y = "age";
+
+            document.getElementById("text3").innerHTML = woman[x] + " is " + woman[y] + " years old.";
+        </script>
+
+        <hr>
+
+        <h2>Adding New Properties</h2>
+        <p>You can add new properties to an exisitng object by simply giving it a value</p>
+
+        <h3>Example</h3>
+
+        <h4>Adding a new Property</h4>
+
+        <p id="text4"></p>
+
+        <script>
+            const dog = {
+                name: "Borris",
+                breed: "Border Collie",
+                age: 7,
+                color: "Black & White"
+            };
+
+            dog.occupation = "Farm Dog";
+
+            document.getElementById("text4").innerHTML = dog.name + " is a " + dog.breed + ", he is " + dog.color + " and is " + dog.age + " years old. " + " He is also a " + dog.occupation + ".";
+        </script>
+
+        <hr>
+
+        <h2>Deleting Properties</h2>
+        <p>The delete keyword deletes a property from an object:</p>
+
+        <h3>Example 1 - Deleting a Property</h3>
+
+        <p id="text5"></p>
+
+        <script>
+            const cat = {
+                name: "Milo",
+                age: 21,
+                eyecolor: "brown",
+                livesIn: "Yeronga"
+            };
+
+            delete cat.age;
+
+            document.getElementById("text5").innerHTML = cat.name + " is " + cat.age + " years old."; 
+
+        </script>
+
+        <h3>Example 2 - Deleting a Property</h3>
+
+        <p id="text6"></p>
+
+        <script>
+            const mouse = {
+                name: "Mickey",
+                age: 4,
+                likesEating: "Cheese",
+                favouriteToy: "Running Wheel"
+            };
+
+            delete mouse["age"];
+
+            document.getElementById("text6").innerHTML = mouse.name + " is " + mouse.age + " years old." + " His favourite toy is the " + mouse.favouriteToy + ".";
+        </script>
+
+        <hr>
+
+        <h2>Nested Objects</h2>
+        <p>Property values in an object can be other object:</p>
+
+        <h3>Example 1 - Accessing Nested Objects</h3>
+
+        <p id="text7"></p>
+        <p id="text8"></p>
+        <p id="text9"></p>
+
+
+        <script>
+            // Create nested Objects
+            const myObj = {
+                name: "John",
+                age: 30,
+                myCars: {
+                    car1: "Ford",
+                    car2: "BMW",
+                    car3: "Fiat"
+                }
+            }
+            document.getElementById("text7").innerHTML = myObj.myCars.car2;
+            document.getElementById("text8").innerHTML = myObj.myCars["car1"];
+            document.getElementById("text9").innerHTML = myObj["myCars"]["car3"];
+        </script>
+
+        <h3>Example 2 - Accessing Nested Objects</h3>
+
+        <p id="text10"></p>
+
+        <script>
+            // Create nested Objects
+            const thisObj = {
+                name: "Ralph",
+                age: 55,
+                hisCars: {
+                    car1: "Porche",
+                    car2: "Lambo",
+                    car3: "Audi",
+                }
+            }
+            let p1 = "hisCars";
+            let p2 = "car2";
+            document.getElementById("text10").innerHTML = thisObj[p1][p2];
+        </script>
+
+
+    </body>
+</html>
