@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Display Objects</title>
+    </head>
+    <body>
+        <h2>How To Display JavaScript Objects</h2>
+        <p>Displaying a JavaScript objct will output [object][object].</p>
+
+        <h3>Example</h3>
+
+        <p id="text1"></p>
+
+        <script>
+            const cow = {
+                name: "daisy",
+                age: 21,
+                cowType: "Dairy Cow"
+            };
+
+            // Display the object
+            document.getElementById("text1").innerHTML = cow;
+        </script>
+
+        <hr>
+
+        <h2>Displaying Properties in a Loop</h2>
+        <p>The properties of an object can be collected in a loop:</p>
+
+        <h3>Example</h3>
+
+        <p id="text2"></p>
+
+        <script>
+            // Create an Object
+            const person = {
+                name: "John",
+                age: 27,
+                city: "Brisbane"
+            };
+
+            // Build a Text
+            let text = "";
+            for (let x in person) {
+                text += person[x] + " ";
+            };
+
+            // Display the Text
+            document.getElementById("text2").innerHTML = text;
+        </script>
+
+        <hr>
+
+        <h2>Using Object.values()</h2>
+        <p><mark>Object.values()</mark> creates an array from the property values:</p>
+        <h3>Example</h3>
+
+        <p id="text3"></p>
+
+        <script>
+            // Create an Object
+            const john = {
+            name: "John",
+            age: 30,
+            city: "New York"
+            };
+
+            // Create an Array
+            const myArray = Object.values(john);
+
+            // Display the Array
+            document.getElementById("demo").innerHTML = myArray;
+        </script>
+
+        <hr>
+
+        <h2>Using Objecy.entries()</h2>
+        <p><mark>Object.emtried()</mark> makes it simple to use objects in loops:</p>
+
+        <h3>Example</h3>
+
+        <p id="text4"></p>
+
+        <script>
+            const fruits = {
+                Bananas: 300,
+                Oranges: 200,
+                Apples: 500
+            };
+
+            let text2 = "";
+            for (let [fruit, amount] of Object.entries(fruits)) {
+                text2 += fruit + ": " + amount + "<br>";
+            }
+
+            document.getElementById("text4").innerHTML = text2;
+        </script>
+
+        <hr>
+
+        <h2>Using JSON.stringify()</h2>
+        <p>JavaScript object can be converted to a string with JSON method <mark>JSON.stringify()</mark>.</p>
+        <h3>Note</h3>
+        <p>The result will be a string written in JSON notation:</p>
+        <p>{"name":"John","age":50,"city":"New York"}</p>
+
+        <h3>Example</h3>
+
+        <p id="text5"></p>
+
+        <script>
+            // Create an Object
+            const city = {
+                name: "Brisbane",
+                population: 1000000,
+                established: 1901
+            };
+
+            // Display JSON
+            document.getElementById("text5").innerHTML = JSON.stringify(city);
+        </script>
+
+    </body>
+</html>

@@ -4,6 +4,126 @@
         <title>JavaScript Object Methods</title>
     </head>
     <body>
-        
+        <p>Object methods are actions that can be performed on objects.</p>
+        <p>A method is a function definition stored as a property value.</p>
+
+        <h3>Example</h3>
+
+        <p id="text1"></p>
+
+        <script>
+            const person = {
+                firstName: "John",
+                lastName: "Doe",
+                age: 27,
+                eyecolor: "brown",
+                id: 1234,
+                fullName: function() {
+                    return this.firstName + " " + this.lastName;
+                }
+            };
+
+            document.getElementById("text1").innerHTML = person.fullName();
+        </script>
+
+        <p>In the example above, <mark>this</mark> refers to the person object:</p>
+        <p><b>this.firstName</b> means the <b>firstName</b> property of <b>person.</b></p>
+        <p><b>this.lastName</b> means the <b>lastName</b> property of <b>person.</b></p>
+
+        <hr>
+
+        <h2>Accessing Object Methods</h2>
+        <p>You access an object method with the following syntax:</p>
+        <p><i>objectName.methodName()</i></p>
+        <p>If you invoke the fullName property with (), it will execute as a function:</p>
+
+        <h3>Example</h3>
+
+        <p id="text2"></p>
+
+        <script>
+            const cow = {
+                firstName: "Daisy",
+                type: "Dairy Cow",
+                age: 18,
+                milkPerDay: "8L",
+                id: 1222,
+                fullName: function () {
+                    return cow.firstName + " The " + cow.type;
+                }
+            };
+
+            document.getElementById("text2").innerHTML = cow.fullName();
+        </script>
+
+        <p>If you access it without (), it will return the function definition:</p>
+
+        <p id="text3"></p>
+
+        <script>
+            const dog = {
+                firstName: "Boss",
+                type: "Border Collie",
+                age: 18,
+                lives: "Farm",
+                id: 1223,
+                fullName: function () {
+                    return dog.firstName + " The " + dog.type;
+                }
+            };
+
+            document.getElementById("text3").innerHTML = dog.fullName;
+        </script>
+
+        <hr>
+
+        <h2>Adding A Method To An Object</h2>
+        <p>Adding a new method to an object is easy.</p>
+
+        <p id="text4"></p>
+
+        <script>
+            // Create an object
+            const horse = {
+                horsename: "Winie",
+                does: "Show Jumping",
+                id: 4567
+            };
+
+            // Add a method
+            horse.name = function () {
+                return this.horsename + " The Horse Does " + this.does;
+            };
+
+            // Display the Object Data
+            document.getElementById("text4").innerHTML = horse.name();
+        </script>
+
+        <hr>
+
+        <h2>Using JavaScript Methods</h2>
+        <p>This example uses JavaScript <mark>toUpperCase()</mark> method to convert text to uppercase:</p>
+
+        <h3>Example</h3>
+
+        <p id="text5"></p>
+
+        <script>
+            // Create an Object
+            const house = {
+                street: "School Road",
+                housetype: "Townhouse",
+                suburb: "Yeronga",
+                id: 8989,
+            };
+
+            // Add a method
+            house.info = function () {
+                return (this.street + ", " + this.suburb + " is a " + this.housetype).toUpperCase();
+            };
+
+            // Diplay Object Data
+            document.getElementById("text5").innerHTML = house.info();
+        </script>
     </body>
 </html>
