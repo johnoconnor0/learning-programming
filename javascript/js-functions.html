@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Functions</title>
+    </head>
+    <body>
+        <h1>JavaScript Functions</h1>
+
+        <p>Call a function which performs a calculation and returns the result:</p>
+
+        <p id="text1"></p>
+
+        <script>
+            function myfunction1(p1, p2) {
+                return p1 * p2;
+            }
+            let result = myfunction1(4, 3);
+            document.getElementById("text1").innerHTML = result;
+        </script>
+
+        <h2>Function Return</h2>
+        <p>Call a function which performs a calculation and returns the result:</p>
+
+        <p id="text2"></p>
+
+        <script>
+            let a = myfunction2(4, 3);
+            document.getElementById("text2").innerHTML = a;
+
+            function myfunction2(a, b) {
+                return a * b;
+            }
+        </script>
+
+        <h2>The Operator</h2>
+        <p>Invoke (call) a function that converts from Fahrenheit to Celsius:</p>
+
+        <p id="text3"></p>
+
+        <script>
+            function toCelsius(f) {
+                return (5/9) * (f-32);
+            }
+
+            let value = toCelsius(77);
+            document.getElementById("text3").innerHTML = value;
+        </script>
+
+        <h2>Functions Used as Variable Values</h2>
+        <p>Using a function as a variable:</p>
+        
+        <p id="text4"></p>
+
+        <script>
+            let text = "The temperature is " + changetoCelsius(77) + " Celsius.";
+            document.getElementById("text4").innerHTML = text;
+
+            function changetoCelsius(fahrenheit) {
+                return (5/9) * (fahrenheit-32);
+            }
+        </script>
+
+        <h2>Local Variables</h2>
+        <p>Outside thisCarFunction() carName is undefined.</p>
+
+        <p id="text6"></p>
+        <p id="text5"></p>
+
+        <script>
+            let text3 = "Outside: " + typeof carName;
+            document.getElementById("text6").innerHTML = text3;
+
+            function thisCarFunction() {
+                let carName = "Volvo";
+                let text3 = "Inside: " + typeof carName + " " + carName;
+                document.getElementById("text5").innerHTML = text3;
+            }
+
+            thisCarFunction();
+        </script>
+
+    </body>
+</html>
