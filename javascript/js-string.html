@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Strings</title>
+    </head>
+    <body>
+        <p>Strings are for <b>storing text</b></p>
+        <p>Strings are written <b>with quotes</b></p>
+        
+        <br>
+        
+        <h2>Using Quotes</h2>
+        <p>A JavaScript string is zero or more characters written inside quotes</p>
+
+        <p id="text1"></p>
+
+        <p id="text2"></p>
+
+        <script>
+            let text = "John Doe"; // String written inside quotes
+
+            document.getElementById("text1").innerHTML = text;
+            document.getElementById("text2").innerHTML = text.length;
+
+        </script>
+
+        <h2>Template Strings</h2>
+
+        <p id="text3"></p>
+
+        <script>
+            let line = 
+
+            `The quick
+            brown fox
+            jumps over
+            the lazy dog`;
+
+            document.getElementById("text3").innerHTML = line;
+        </script>
+
+    </body>
+</html>
