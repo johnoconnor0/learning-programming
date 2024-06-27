@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Constructors</title>
+    </head>
+    <body>
+        <h2>Object Constructor Functions</h2>
+        <p>Sometimes we need to create many objects of the same type.</p>
+        <p>To create an object type we use an object constructor function.</p>
+        <p>It is considered good practice to name constructor with an upper-case letter.</p>
+
+        <h2>Object Type Person</h2>
+        
+        <p id="text1"></p>
+
+        <script>
+            // Constructor Function for Person objects
+            function Person(first, last, age, eye) {
+                this.firstName = first;
+                this.lastName = last;
+                this.age = age;
+                this.eyeColor = eye;
+                this.fullName = function() {
+                    return this.firstName + " " + this.lastName
+                };
+            }
+
+            // Create a Person object
+            const myFather = new Person("John", "Doe", 50, "blue");
+
+            // Display age
+            document.getElementById("text1").innerHTML = "My father is " + myFather.age + ".";
+        </script>
+
+        <hr>
+
+        <h2>Note</h2>
+        <p>In the constructor function, <mark>this</mark> has no value.</p>
+        <p>The valueof <mark>this </mark>will become the new object when a new object is created.</p>
+        <br>
+        <p>Now we can use <mark>new Person()</mark> to create many new Person objects:</p>
+
+        <p id="text2"></p>
+
+        <script>
+            const myMother = new Person("Sally", "Wilson", 45, "brown");
+
+            // Display Age
+            document.getElementById("text2").innerHTML = "My father is " + myFather.age + ". My mother is " + myMother.age + ".";
+        </script>
+
+        <hr>
+
+        <h2>Adding a Property to a Constructor</h2>
+        <p>You can NOT add a new property to an object constructor</p>
+        <p>Toadd a new property, you must add it to the constructor function prototype:</p>
+
+        <p id="text3"></p>
+
+        <script>
+            // Add a new Property
+            Person.prototype.nationality = "English";
+
+            // Display new Property
+            document.getElementById("text3").innerHTML = "The nationality of my father is " + myFather.nationality;
+        </script>
+
+        <p id="text4"></p>
+
+        <script>
+            document.getElementById("text4").innerHTML = "My father's full name is " + myFather.fullName();
+        </script>
+
+        <br>
+        <p>Adding a method to a created object:</p>
+
+        <p id="text5"></p>
+
+        <script>
+            // Add a Name Method
+            myMother.changeName = function (name) {
+                this.lastName = name;
+            }            
+
+            // Change Name
+            myMother.changeName("Doe");
+
+            // Display fullName
+            document.getElementById("text5").innerHTML = "My mother's last name is " + myMother.lastName;
+
+        </script>
+
+        <hr>
+
+        <h2>Built-in JavaScript Constructors</h2>
+        <p>JavaScript has built-in constructors for all native objects:</p>
+
+        <script>
+            new object() // A new Object object
+            new Array() // A new Array object
+            new Map() // A new Map object
+            new Set() // A new Set object
+            new Date() // A new Date object
+            new Regexp() //A new Regexp object
+            new Function() // A new Function object
+        </script>
+        <h2>Note</h2>
+        <p>The <mark>Math()</mark> object is not in the list. <mark>MAth</mark> is a global object. The <mark>new</mark> keyword cannot be used on <mark>Math</mark>.</p>
+        <br>
+        <h2>Dis you Know?</h2>
+        <p>Use object literals {} instead of new Object()</p>
+        <p>Use array literals [] instead of new Array()</p>
+        <p>Use pattern literal /()/ instead of new RegExp()</p>
+        <p>Use function expressions () {} instead of new Function()</p>
+        <br>
+        <h3>example</h3>
+        <script>
+            ""; // primitive string
+            0; // primitive number
+            false; // primitive boolean
+
+            {}; // object object
+            []; // array object
+            /()/ // regexp object
+            function(){}; // function
+        </script>
+    </body>
+</html>
