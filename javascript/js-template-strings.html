@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Template Strings</title>
+
+        <style>
+            .jscolor {
+
+            }
+            .spanclass {
+                background-color: rgb(231, 233, 235);
+                border-radius: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                text-size-adjust: 100%;
+                box-sizing: border-box;
+                display: block;
+            }
+            .spancontainer {
+                border-left: 4px solid green;
+                margin-top: 16px;
+                margin-bottom: 16px;
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                background-color: white;
+                overflow-wrap: break-word;
+                line-height: 22.5px;
+                font-size: 15px;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Back-Tics Syntax</h2>
+        <p>Template Strings use back-tics (``)`rather than quotes ("") to define a string:</p>
+
+        <p id="demo1"></p>
+
+        <script>
+            let text = `Hello World!`;
+            document.getElementById("demo1").innerHTML = text;
+        </script>
+
+        <hr>
+
+        <h2>Quotes Inside Strings</h2>
+        <p>Template String allow both single and double quotes inside a string:</p>
+
+        <p id="demo2"></p>
+
+        <script>
+            let text1 = `He's often called "Johnny"`;
+
+            document.getElementById("demo2").innerHTML = text1;
+        </script>
+
+        <hr>
+
+        <h2>Multiline Strings</h2>
+        <p>Template Strings allow multiline strings:</p>
+
+        <p id="demo3"></p>
+
+        <script>
+            let text2 = `The quick brown fow
+            jumps over the
+            lazy dog`;
+
+            document.getElementById("demo3").innerHTML = text2;
+        </script>
+
+        <hr>
+
+        <h2>Interpolation</h2>
+        <p>Template String provide an easy way to interpolate variables and expressions into strings.</p>
+        <p>The method is called string interpolation.</p>
+        <p>The syntax is:</p>
+        <div class="spanclass">
+            <div class="spancontainer">
+                <span class="jscolor">${...}</span>
+            </div>
+        </div> 
+        
+        <hr>
+
+        <h2>Variable Substitutions</h2>
+        <p>Template Strings allow variables in strings</p>
+
+        <p id="demo4"></p>
+
+        <script>
+            let firstName = "John";
+            let lastName = "Doe";
+
+            let text4 = `Welcome ${firstName}, ${lastName}!`;
+
+            document.getElementById("demo4").innerHTML = text4;
+        </script>
+
+        <hr>
+
+        <h2>Expression Substitution</h2>
+        <p>Template Strings allow expressions in strings:</p>
+
+        <p id="demo5"></p>
+
+        <script>
+            let price = 10;
+            let VAT = 0.25;
+            let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+
+            document.getElementById("demo5").innerHTML = total;
+        </script>
+
+        <hr>
+
+        <h2>HTML Templates</h2>
+        <p id="demo6"></p>
+
+        <script>
+            let header = "Template Strings";
+            let tags = ["template strings", "javascript", "es6"];
+
+            let html = `<h2>${header}</h2><ul>`;
+
+                for (const x of tags) {
+                    html += `<li>${x}</li>`;
+                }
+            html += `</li>`;
+            document.getElementById("demo6").innerHTML = html;
+
+        </script>
+    </body>
+</html>

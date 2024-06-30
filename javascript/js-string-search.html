@@ -4,6 +4,122 @@
         <title>JavaScript String Search</title>
     </head>
     <body>
-        
+        <h2>JavaScript String indexOf()</h2>
+        <p>The <mark>indexOf()</mark> method returns the index (position) occurance of a string in a string, or it returns -1 if the string is not found:</p>
+
+        <p>The position of the first occurenece of "locate" is:</p>
+        <p id="demo1"></p>
+
+        <script>
+            let text = "Please locate where 'locate' occurs!";
+            let index = text.indexOf("locate");
+
+            document.getElementById("demo1").innerHTML = index;
+        </script>
+
+        <hr>
+
+        <h2>JavaScript String lastIndexOf()</h2>
+        <p>The <mark>lastIndexOf()</mark> method returns the index of the last occurence of a specified text in a string:</p>
+        <p>The position of the last occurence of "day" is:</p>
+
+        <p id="demo2"></p>
+
+        <script>
+            let text2 = "Today is a good day, tomorrow should also be a good day";
+            let index2 = text2.lastIndexOf("day");
+
+            document.getElementById("demo2").innerHTML = index2;
+        </script>
+
+        <hr>
+
+        <h2>JavaScript String search()</h2>
+        <p>The <mark>search()</mark> method searches a string for a string (or a regular expression) and returns the position of the match:</p>
+        <p>The position of the first occurence of "locate" is:</p>
+
+        <p id="demo3"></p>
+
+        <script>
+            let text3 = "Please locate where 'locate' occurs!";
+            let index3 = text.search("locate");
+
+            document.getElementById("demo3").innerHTML = index3;
+        </script>
+
+        <h2>JavaScript String match()</h2>
+        <p>The <mark>match()</mark> method returns an array containing the results of matching a string against a string (or a regular expression).</p>
+        <p>Perform a search ofr "ain":</p>
+
+        <p id="demo4"></p>
+
+        <script>
+            let text4 = "The rain in SPAIN stays mainly in the plain";
+            const myArr = text4.match("ain");
+
+            document.getElementById("demo4").innerHTML = myArr.length + " " + myArr;
+        </script>
+
+        <hr>
+
+        <h2>JavaScript String matchAll()</h2>
+
+        <p>The <mark>matchAll()</mark> method returns an iterator containing the results of matching a string against a string (or a regular expression).</p>
+        <p>ES2020 intoduced the string method matchAll().</p>
+
+        <p id="demo5"></p>
+
+        <script>
+            let text5 = "I love cats, cats are very easy to love. Cats are very popular.";
+            const iterator = text5.matchAll(/cats/gi);
+
+            document.getElementById("demo5").innerHTML = Array.from(iterator);
+        </script>
+
+        <hr>
+
+        <h2>JavaScript String includes()</h2>
+
+        <p>The <mark>includes()</mark> method returns true if a string contains a specified value, otherwise it returns false.</p>
+
+        <p>Check if a string includes "world":</p>
+        <p id="demo6"></p>
+
+        <script>
+            let text6 = "Hello world, welcome to the universe.";
+
+            document.getElementById("demo6").innerHTML = text6.includes("world");
+        </script>
+
+        <hr>
+
+        <h2>JavaScript String startsWith()</h2>
+        <p>The <mark>startsWith()</mark> method returns true if a string begins with a specified value. Otherwise it returns false.</p>
+
+        <p>Check if a string starts with "Hello":</p>
+        <p id="demo7"></p>
+
+        <script>
+            let text7 = "Hello World";
+
+            document.getElementById("demo7").innerHTML = text7.startsWith("Hello");
+        </script>
+
+        <hr>
+
+        <h2>HavaScript String endsWith()</h2>
+        <p>The <mark>endsWith()</mark> method returns true if a string ends with a specified value. Otherwsie it returns false.</p>
+
+        <p>Check if a string ends with "John":</p>
+        <p id="demo8"></p>
+
+        <script>
+            let text8 = "John Does";
+
+            document.getElementById("demo8").innerHTML = text8.endsWith("John");
+        </script>
+
+
+
     </body>
 </html>
