@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Arrays</title>
+    </head>
+    <body>
+
+        <h2>Why Use Arrays</h2>
+        <p>If you gace a list of items (a list of car names, for example), storing the cars in a single variable could look like this:</p>
+
+        <pre>
+            let car1 = "Saab";
+            let car2 = "Volvo";
+            let car3 = "BMW";
+        </pre>
+
+        <p>However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?</p>
+        <p>The solution is an array</p>
+        <p>An array can hold many values under a single name, and you can access the values by referring to an index number.</p>
+
+
+        <h2>Creating An Array</h2>
+        <p>Using an array literal is the easiest way to create a JavaScript Array.</p>
+        <p>Syntax:</p>
+        <p>const array_name = [item1, item2, ...];</p>
+
+        <p id="demo1"></p>
+
+        <script>
+            const cars = ["Saab", "Volvo", "BMW"];
+
+            document.getElementById("demo1").innerHTML = cars;
+        </script>
+
+        <hr>
+
+        <h2>Changing an Array Element</h2>
+        <p>This statement changes the value of the first element in animals:</p>
+
+        <p id="demo2"></p>
+
+        <script>
+            let animals = ["cat", "dog", "mouse", "fish"];
+            animals[3] = "lion";
+
+            document.getElementById("demo2").innerHTML = animals;
+        </script>
+
+        <hr>
+
+        <h2>Converting an Array to a String</h2>
+        <p>The JavaScript method toString() converts an array to a string of (comma seperated) array values.</p>
+
+        <p id="demo3"></p>
+
+        <script>
+            const fruits = ["Banana", "Orange", "Apple", "Manago"];
+
+            document.getElementById("demo3").innerHTML = fruits.toString();
+        </script>
+
+        <hr>
+
+        <h2>Access the Full Array</h2>
+        <p>With JavaScript, the full array can be access by referring to the array name:</p>
+
+        <p id="demo4"></p>
+
+        <script>
+            const foods = ["chicken", "pie", "sushi", "steak"];
+
+            document.getElementById("demo4").innerHTML = foods;
+        </script>
+
+        <hr>
+
+        <h2>Looping Array Elements</h2>
+        <p>One way to loop through an array, is using a for loop:</p>
+
+        <p id="demo5"></p>
+
+        <script>
+            const pies = ["Beef and pepper", "Beef", "Steak and mushroom", "Potatoe"];
+
+            let pLen = pies.length;
+
+            let text = "<ul>";
+            for (let i = 0; i < pLen; i++) {
+                text += "<li>" + pies[i] + "</li>";
+            }
+            text += "</ul>";
+
+            document.getElementById("demo5").innerHTML = text;
+        </script>
+
+        <hr>
+
+        <h2>Adding Array Elements</h2>
+        <p>The easiest way to add a new element to an array is using the push() method:</p>
+
+        <p id="demo6"></p>
+
+        <button onclick="myFunction()">Try It</button>
+
+        <script>
+            const eggs = ["Free Range", "Caged", "Farm Fresh"];
+            document.getElementById("demo6").innerHTML = eggs;
+
+            function myFunction() {
+                eggs.push("Large");
+                document.getElementById("demo6").innerHTML = eggs;
+            }
+
+        </script>
+
+        <hr>
+
+        <h2>Nested Arrays and Objects</h2>
+        <p>Values in objects can be arrays, and values in arrays can be objects:</p>
+
+        <p id="demo7"></p>
+
+        <script>
+            let z = "";
+            const myObj = {
+                name: "John",
+                age: 27,
+                cars: [
+                    {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+                    {name:"BMW", models:["320", "X3", "X5"]},
+                    {name:"Fiat", models:["500", "Panda"]}
+                ]
+            }
+
+            for (let i in myObj.cars) {
+                z += "<h2>" + myObj.cars[i].name + "</h2>";
+                for (let j in myObj.cars[i].models) {
+                    z += myObj.cars[i].models[j] + "<br>";
+                }
+            }
+
+            document.getElementById("demo7").innerHTML = z;
+        </script>
+    </body>
+</html>

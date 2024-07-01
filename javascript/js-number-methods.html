@@ -32,5 +32,123 @@
                 <td>Returns a number as a number</td>
             </tr>
         </table>
+
+        <hr>
+
+        <h2>toString () Method</h2>
+
+        <p id="demo1"></p>
+
+        <script>
+            let x = 123;
+
+            document.getElementById("demo1").innerHTML = x.toString() + "<br>" + (123).toString() + "<br>" + (100 + 23).toString();
+        </script>
+
+        <hr>
+
+        <h2>The toExponential() Method</h2>
+        <p>toExponential() returns a string, with a number rounded and written using exponetial notation.</p>
+        <p>A parameter defines the number of characters behind the decimal point:</p>
+
+        <p id="demo2"></p>
+
+        <script>
+            let a = 9.565;
+
+            document.getElementById("demo2").innerHTML = a.toExponential() + "<br>" + a.toExponential(2) + "<br>" + a.toExponential(4) + "<br>" + a.toExponential(6);
+        </script>
+
+        <hr>
+
+        <h2>The toFixed() Method</h2>
+        <p>toFixed() returns a string, with the number with a specified number of decimals:</p>
+
+        <p id="demo3"></p>
+
+        <script>
+            let b = 9.9897;
+
+            document.getElementById("demo3").innerHTML = b.toFixed(0) + "<br>" + b.toFixed(2) + "<br>" + b.toFixed(4) + "<br>" + b.toFixed(6);
+        </script>
+
+        <hr>
+
+        <h2>The toPrecision() Method</h2>
+        <p>toPrecision() returns a string, with a number written with a specified length:</p>
+
+        <p id="demo4"></p>
+
+        <script>
+            let c = 9.563;
+
+            document.getElementById("demo4").innerHTML = c.toPrecision() + "<br>" + c.toPrecision(2) + "<br>" + c.toPrecision(4) + "<br>" + c.toPrecision(6);
+        </script>
+
+        <hr>
+
+        <h2>The valueOf() Method</h2>
+        <p>valueOf() returns a number as a number.</p>
+
+        <p id="demo5"></p>
+
+        <script>
+            let d = 123;
+
+            document.getElementById("demo5").innerHTML = d.valueOf() + "<br>" + (123).valueOf() + "<br>" + (100 + 23).valueOf();
+        </script>
+
+        <hr>
+
+        <h2>Converting Variables to Numbers</h2>
+
+        <h3>The Number() Method</h3>
+        <p>The Number() method can be used to convert JavaScript variables to numbers:</p>
+
+        <p id="demo6"></p>
+
+        <script>
+            document.getElementById("demo6").innerHTML = 
+            Number(true) + "<br>" + 
+            Number(false) + "<br>" +
+            Number("10") + "<br>" +
+            Number(" 10") + "<br>" + 
+            Number("10 ") + "<br>" +
+            Number(" 10  ") + "<br>" +
+            Number("10.33") + "<br>" +
+            Number("10,33") + "<br>" +
+            Number("10 33") + "<br>" +
+            Number("John");
+        </script>
+
+        <h3>The Number() Method Used on Dates</h3>
+        <p>Number() can also convert a date to a number.</p>
+
+        <p id="demo7"></p>
+
+        <script>
+            let e = new Date("2017-09-30");
+
+            document.getElementById("demo7").innerHTML = Number(e);
+
+        </script>
+
+        <h3>The parseInt() Method</h3>
+        <p>parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:</p>
+
+        <p id="demo8"></p>
+
+        <script>
+            document.getElementById("demo8").innerHTML = 
+            parseInt("-10") + "<br>" +
+            parseInt("-10.333") + "<br>" +
+            parseInt("10") + "<br>" +
+            parseInt("10.33") + "<br>" +
+            parseInt("10 6") + "<br>" +
+            parseInt("10 years") + "<br>" +
+            parseInt("years 10");
+        </script>
+
+
     </body>
 </html>
