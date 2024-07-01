@@ -5,5 +5,157 @@
     </head>
     <body>
         <p>JavaScript has only one type of number.Numbers can be written with or without decimals.</p>
+
+        <p id="demo1"></p>
+
+        <script>
+            let x = 3;
+            let y = 3.14;
+
+            document.getElementById("demo1").innerHTML = x + "<br>" + y;
+        </script>
+
+        <hr>
+
+        <p>Extra large or extra small numbers can be written with scientific (exponent) notation</p>
+
+        <p id="demo2"></p>
+
+        <script>
+            let a = 123e5;
+            let b = 123e-5;
+
+            document.getElementById("demo2").innerHTML = a + "<br>" + b;
+        </script>
+
+        <hr>
+
+        <h2>Integer Precision</h2>
+        <p>Integers (numbers without a period or exponent notation) are accurate up to 15 digits.</p>
+
+        <p id="demo3"></p>
+
+        <script>
+            let c = 999999999999999;
+            let d = 9999999999999999;
+
+            document.getElementById("demo3").innerHTML = c + "<br>" + d;
+        </script>
+
+        <hr>
+
+        <h2>Floating Precision</h2>
+        <p>Floating point arithmetic is not always 100% accurate.</p>
+
+        <p id="demo4"></p>
+
+        <script>
+            let e = 0.4 + 0.6;
+
+            document.getElementById("demo4").innerHTML = "0.4 + 0.6 = " + e;
+        </script>
+
+        <hr>
+
+        <h2>Adding Numbers and Strings</h2>
+        <p>If you add two numbers, the result will be a number:</p>
+
+        <p id="demo5"></p>
+        <p id="demo6"></p>
+
+        <script>
+            let f = 10;
+            let g = 20;
+            let h = f + g;
+
+            document.getElementById("demo5").innerHTML = h;
+        </script>
+
+        <script>
+            let i = "10";
+            let j = "20";
+            let k = i + j;
+
+            document.getElementById("demo6").innerHTML = k;
+        </script>
+
+        <p>If you add a number and a string, the result will be a concatenated string:</p>
+
+        <p id="demo7"></p>
+
+        <script>
+            let l = 10;
+            let m = "20";
+            let o = l + m;
+
+            document.getElementById("demo7").innerHTML = o;
+        </script>
+
+        <hr>
+
+        <p>JavaScript will try convert strings to numbers when dividing:</p>
+
+        <p id="demo8"></p>
+
+        <script>
+            let n = "100";
+            let p = "10";
+            let q = n / p;
+
+            document.getElementById("demo8").innerHTML = q;
+        </script>
+
+        <hr>
+
+        <h2>NaN - Not a Number</h2>
+
+        <p><mark>NaN</mark> is a JavaScript reserved word indicating that a number is not a legal number.</p>
+        <p>Trying to do arithmetc with a non numeric string will result in NaN (not a number):</p>
+
+        <p id="demo9"></p>
+
+        <script>
+            let r = 100;
+            let s = "Apple";
+            let t = r / s;
+
+            document.getElementById("demo9").innerHTML = t;
+        </script>
+
+        <hr>
+
+        <h2>Infinity</h2>
+
+        <p><mark>Infinity or -Infitnty</mark> is the value JavaScript will return if you calculate a number outside the largest possible number.</p>
+
+        <p id="demo10"></p>
+
+        <script>
+            let myNumber = 2;
+            let txt = "";
+            while (myNumber != Infinity) {
+                myNumber = myNumber * myNumber;
+                txt = txt + myNumber + "<br>";
+            }
+            document.getElementById("demo10").innerHTML = txt;
+        </script>
+
+        <hr>
+
+        <h2>JavaScript Numbers as Objects</h2>
+        <p>normally JavaScript numbers are primitive values created from literals</p>
+        <p>But numbers can also be defined as objects with the keyword <mark> new:</p>
+
+        <p id="demo11"></p>
+
+        <script>
+            // x is a number
+            let u = 123;
+
+            // v is a Number object
+            let v = new Number(123);
+
+            document.getElementById("demo11").innerHTML = typeof u + "<br>" + typeof v;
+        </script>
     </body>
 </html>

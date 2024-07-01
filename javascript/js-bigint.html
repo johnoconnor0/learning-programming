@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript BigInt</title>
+    </head>
+    <body>
+        <p>JavaScript <mark>BigInt</mark> variables are used to store big integer values that are too big to be represented by a normal JavaScript Number.</p>
+
+        <br>
+
+        <h2>How to Create a BigInt</h2>
+        <p>To create a BigInt, append n to the end of an integer of call BigInt():</p>
+
+        <p id="demo1"></p>
+
+        <script>
+            let a = 9999999999999;
+            let b = BigInt("9999999999999999");
+
+            document.getElementById("demo1").innerHTML = a + "<br>" + b;
+        </script>
+
+        <p id="demo2"></p>
+
+        <script>
+            let c = BigInt("126784623746789127391674367312");
+            let d = 999999999999999994242356547452n;
+
+            document.getElementById("demo2").innerHTML = c + "<br>" + d;
+        </script>
+
+        <hr>
+
+        <h2>BigInt: A new JavaScript DataType</h2>
+        <p>The JavaScript typeof a BigInt is "bigint":</p>
+
+        <p id="demo3"></p>
+
+        <script>
+            let e = BigInt("1839498237489138312833423423");
+
+            document.getElementById("demo3").innerHTML = typeof e;
+        </script>
+
+        <h2>Notes</h2>
+        <ul>
+            <li>Opperators that can be used on a JavaScript number can also be used on a BigInt.</li>
+            <li>Arithmetic between a BigInt and a number is not allowed (type conversion lose information)</li>
+            <li>Unsigned right shift (>>>) can not be done on a BigInt (it does not have a fixed width).</li>
+            <li>A BigInt cannot have a decimal.</li>
+            <li>BigInt can also be written in a hexadecimal, octal, or binary notation:</li>
+            <li>Rounding can compromise program security:</li>
+        </ul>
+
+        <h2>MAX_SAFE_Integer Example</h2>
+        <p>Is 9007199254740992 equal to 9007199254740993? </p>
+
+        <p id="demo4"></p>
+
+        <script>
+            let f = 9007199254740992 === 9007199254740993;
+
+            document.getElementById("demo4").innerHTML = f;
+        </script>
+
+        <p id="demo5"></p>
+
+        <script>
+            let g = Number.MAX_SAFE_INTEGER;
+
+            document.getElementById("demo5").innerHTML = g;
+        </script>
+
+        <p id="demo6"></p>
+
+        <script>
+            let h = Number.MIN_SAFE_INTEGER;
+
+            document.getElementById("demo5").innerHTML = h;
+        </script>
+
+        <hr>
+
+        <h2>New Number Methods</h2>
+
+        <h3>The Number.isInteger() Method</h3>
+        <p>The Number.isInteger() method returns true if the argument is an integer.</p>
+
+        <p id="demo7"></p>
+
+        <script>
+            document.getElementById("demo7").innerHTML = Number.isInteger(10) + "<br>" + Number.isInteger(10.5);
+        </script>
+
+        <h3>The Number.isSafeInteger() Method</h3>
+        <p>A safe integer is an integer that can be exactly represented as a double precision number.</p>
+        <p>The Number.isSafeInteger() method returns true if the argument is a safe integer.</p>
+
+        <p id="demo8"></p>
+
+        <script>
+            document.getElementById("demo8").innerHTML = Number.isSafeInteger(10) + "<br>" + Number.isSafeInteger(1234567898765432153453);
+        </script>
+
+    </body>
+</html>
